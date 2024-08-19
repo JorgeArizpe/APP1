@@ -2,6 +2,10 @@ import { StatusBar } from 'expo-status-bar';
 import { FlatList, StyleSheet, Text, View } from 'react-native';
 import ClassExample from './clases/ClassExample';
 import { Doggy, DoggyRow } from './clases/DoggyComponent';
+import RequestClass from './clases/RequestClass';
+import RequestFunction from './clases/RequestFunction';
+
+let url = 'https://bitbucket.org/itesmguillermorivas/partial2/raw/45f22905941b70964102fce8caf882b51e988d23/carros.json'
 
 export default function App() {
   return (
@@ -11,14 +15,16 @@ export default function App() {
       {/* <Doggy name="dog" age= {10} /> */}
       <FlatList
         data={[
-          {name: "Perro 1", uri:"https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/advisor/wp-content/uploads/2023/07/top-20-small-dog-breeds.jpeg.jpg"},
-          {name: "Perro 2", uri:"https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/advisor/wp-content/uploads/2023/07/top-20-small-dog-breeds.jpeg.jpg"},
-          {name: "Perro 3", uri:"https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/advisor/wp-content/uploads/2023/07/top-20-small-dog-breeds.jpeg.jpg"}
+          { name: "Perro 1", uri: "https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/advisor/wp-content/uploads/2023/07/top-20-small-dog-breeds.jpeg.jpg" },
+          // {name: "Perro 2", uri:"https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/advisor/wp-content/uploads/2023/07/top-20-small-dog-breeds.jpeg.jpg"},
+          // {name: "Perro 3", uri:"https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/advisor/wp-content/uploads/2023/07/top-20-small-dog-breeds.jpeg.jpg"}
         ]}
-        renderItem={({item}) => {
-          return <DoggyRow name = {item.name } uri={item.uri}/>
+        renderItem={({ item }) => {
+          return <DoggyRow name={item.name} uri={item.uri} />
         }}
       />
+      {/* <RequestClass url={url} /> */}
+      <RequestFunction url={url}/>
       <StatusBar style="auto" />
     </View>
   );
