@@ -1,7 +1,7 @@
 import React, { Component, useState, useEffect } from 'react'
 import { ActivityIndicator, Button, FlatList, Pressable, Text, View } from 'react-native'
 
-const url = 'https://raw.githubusercontent.com/JorgeArizpe/APP1/master/assets/json/friends.json?token=GHSAT0AAAAAACVXRD6WSKCMWNKO3ETCKNW6ZWLNPEA'
+const url = 'https://raw.githubusercontent.com/JorgeArizpe/APP1/master/assets/json/friends.json'
 
 export default function Friends({ navigation }: any) {
     const [data, setData] = useState([]);

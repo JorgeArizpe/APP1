@@ -1,7 +1,7 @@
 import React, { Component, useState, useEffect } from 'react'
 import { ActivityIndicator, Button, FlatList, Pressable, Text, View } from 'react-native'
 
-const url = 'https://raw.githubusercontent.com/JorgeArizpe/APP1/master/assets/json/hobies.json?token=GHSAT0AAAAAACVXRD6WCIYPDNZOMPMGIHCOZWLM5YQ'
+const url = 'https://raw.githubusercontent.com/JorgeArizpe/APP1/master/assets/json/hobies.json'
 
 export default function Hobby({ navigation }: any) {
     const [data, setData] = useState([]);
