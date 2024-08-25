@@ -2,16 +2,16 @@
     {
         "name": "Erick",
         "age": "20",
-        "picture": "https://raw.githubusercontent.com/JorgeArizpe/APP1/master/assets/images/Erick.jpeg?token=GHSAT0AAAAAACVXRD6WB2NJF4C4JI2EWMFQZWHKWHA"
+        "picture": "https://github.com/JorgeArizpe/APP1/blob/master/assets/images/Erick.jpeg?raw=true"
     },
     {
         "name": "Edwin",
         "age": "21",
-        "picture": "https://raw.githubusercontent.com/JorgeArizpe/APP1/master/assets/images/Edwin.jpeg?token=GHSAT0AAAAAACVXRD6W2HNAH4V667S4MK44ZWHKXEAg"
+        "picture": "https://github.com/JorgeArizpe/APP1/blob/master/assets/images/Edwin.jpeg?raw=true"
     },
     {
         "name": "Paty",
         "age": "20",
-        "picture": "https://raw.githubusercontent.com/JorgeArizpe/APP1/master/assets/images/Paty.jpeg?token=GHSAT0AAAAAACVXRD6WLJQCFB47XSJY74JQZWHKXLQ"
+        "picture": "https://github.com/JorgeArizpe/APP1/blob/master/assets/images/Paty.jpeg?raw=true"
     }
 ]
