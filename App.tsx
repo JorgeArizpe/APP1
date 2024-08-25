@@ -1,49 +1,44 @@
 import { StatusBar } from 'expo-status-bar';
-import { FlatList, Pressable, StyleSheet, Text, View, Button } from 'react-native';
+import { StyleSheet, View, Button } from 'react-native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { NavigationContainer } from '@react-navigation/native';
+import Friends from './Act2/Friends';
+import FriendsDetail from './Act2/FriendsDetail';
+import Hobby from './Act2/Hobby';
+import HobbyDetail from './Act2/HobbyDetail';
 
 
 const stack = createNativeStackNavigator();
 
-export default function App() {
+function App({ navigation }: any) {
   return (
     <View style={styles.container}>
-
+      <Button
+      title='Friends'
+      onPress={() => {
+        navigation.navigate('Friends')
+      }}
+      />
+      <Button
+      title='Hobbies'
+      onPress={() => {
+        navigation.navigate('Hobbies')
+      }}
+      />
       <StatusBar style="auto" />
     </View>
   );
 }
 
-function NavRoot({ navigation }: any) {
-
-  return (
-    <View style={styles.container} >
-      <Button
-        title="Navigate"
-        onPress={() => { 
-          navigation.navigate("Example", {data: "Data"})
-        }}
-      />
-    </View>
-  )
-}
-
-function NavExample({ navigation, route }: any) {
-  return (
-    <View style={styles.container}>
-      <Text>Nav example page</Text>
-      <Text>{route.params.data}</Text>
-    </View>
-  )
-}
-
-function navigation() {
+export default function navigation() {
   return (
     <NavigationContainer>
       <stack.Navigator>
-        <stack.Screen name="Root" component={NavRoot} />
-        <stack.Screen name="Example" component={NavExample} />
+        <stack.Screen name="App" component={App} />
+        <stack.Screen name="Friends" component={Friends} />
+        <stack.Screen name="Friend" component={FriendsDetail} />
+        <stack.Screen name="Hobbies" component={Hobby} />
+        <stack.Screen name="Hobby" component={HobbyDetail} />
       </stack.Navigator>
     </NavigationContainer>
   )
@@ -52,7 +47,6 @@ function navigation() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "gray",
-    padding: 10,
+    padding: 20,
   },
 });
