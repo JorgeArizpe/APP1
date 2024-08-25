@@ -9,6 +9,7 @@ export default function FriendsDetail({ navigation, route }: any) {
             <Text> Age: {route.params.friend.age} </Text>
             <Image
                 source={{ uri: route.params.friend.picture }}
+                style={{ width: 200, height: 200 }}
             />
         </View>
     )

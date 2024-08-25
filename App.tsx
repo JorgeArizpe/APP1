@@ -34,7 +34,7 @@ export default function navigation() {
   return (
     <NavigationContainer>
       <stack.Navigator>
-        <stack.Screen name="App" component={App} />
+        <stack.Screen name="Home" component={App} />
         <stack.Screen name="Friends" component={Friends} />
         <stack.Screen name="Friend" component={FriendsDetail} />
         <stack.Screen name="Hobbies" component={Hobby} />
