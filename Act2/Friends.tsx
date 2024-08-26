@@ -1,5 +1,5 @@
 import React, { Component, useState, useEffect } from 'react'
-import { ActivityIndicator, Button, FlatList, Pressable, Text, View } from 'react-native'
+import { ActivityIndicator, Pressable, FlatList, StyleSheet, View, Text } from 'react-native'
 
 const url = 'https://raw.githubusercontent.com/JorgeArizpe/APP1/master/assets/json/friends.json'
 
@@ -19,7 +19,7 @@ export default function Friends({ navigation }: any) {
     }, []);
 
     return (
-        <View style={{ alignContent: 'center', padding: 30}}>
+        <View style={styles.container}>
             {
                 data.length > 0 ?
                     <FlatList
@@ -27,11 +27,14 @@ export default function Friends({ navigation }: any) {
                         renderItem={({ item }) => {
                             return (
                                 <View>
-                                    <Button 
-                                    onPress={() => { navigation.navigate('Friend', { friend: item })}}
-                                    title = {item['name']}
+                                    <Pressable
+                                    style={styles.button}
+                                        onPress={() => {
+                                            navigation.navigate('Friend', { friend: item });
+                                        }}
                                     >
-                                    </Button>
+                                        <Text style={styles.buttonText}> {item['name']} </Text>
+                                    </Pressable>
                                 </View>
                             )
                         }}
@@ -42,3 +45,25 @@ export default function Friends({ navigation }: any) {
         </View>
     )
 }
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 2,
+        padding: 20,
+        fontSize: 20,
+        backgroundColor: 'lightblue',
+        flexDirection: 'column',
+        paddingTop: 60,
+    },
+    button: {
+        padding: 75,
+        backgroundColor: 'green',
+        borderRadius: 20,
+        alignItems: 'center',
+        margin: 20,
+    },
+    buttonText: {
+        color: '#FFFFFF',
+        fontSize: 30,
+    },
+});
